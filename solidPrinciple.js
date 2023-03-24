@@ -1,6 +1,7 @@
+//https://duncan-mcardle.medium.com/solid-principle-3-liskov-substitution-javascript-fdb6af8ee1ea
+
 //liskov's principle
 // If you have a function, that works for a base type, it should work for a derived type
-//https://duncan-mcardle.medium.com/solid-principle-3-liskov-substitution-javascript-fdb6af8ee1ea
 class Rectangle {
     constructor(width, height) {
         this._width = width
@@ -163,7 +164,7 @@ class DatabaseManager {
 
 //open close principle
 
-
+// The open-closed principle says that code should be open for extension, but closed for modification
 class Vehicle {
     constructor(fuelCapacity, fuelEfficiency) {
         this.fuelCapacity = fuelCapacity;
@@ -247,7 +248,7 @@ console.log(hybridVehicle.getRange()); // Outputs '200'
 
 // interface segregation principle
 
-
+//The interface segregation principle states that an entity should never be forced to implement an interface that contains elements which it will never use
 class Phone {
     constructor() {
         if (this.constructor.name === 'Phone')
@@ -292,7 +293,7 @@ class Nokia3310 extends Phone {
 
 
 // dependency inversion
-
+// The dependency injection principle states that high level code should never depend on low level interfaces, and should instead use abstractions. It’s all about decoupling code.
 
 class PurchaseHandler {
     processPayment(paymentDetails, amount) {
